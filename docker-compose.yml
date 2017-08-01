@@ -1,0 +1,6 @@
+version: '2'
+services:
+    latex:
+        build: ./latex
+        container_name: latex
+        image: pyramation/latex
