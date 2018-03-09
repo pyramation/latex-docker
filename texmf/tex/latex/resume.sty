@@ -1,0 +1,33 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{resume}
+\RequirePackage{setspace}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\topmargin}{-.7in}
+%\setlength{\textheight}{9in}
+%\setlength{\parindent}{0pt}
+
+\oddsidemargin=.15in
+\evensidemargin=.15in
+\textwidth=6in
+\topmargin=-.5in
+\textheight=9in
+\parindent=0in
+\pagestyle{empty}
+
+\newcommand{\h}[1]{%
+\vspace{0.7cm}
+{\large \bf #1} \\
+\underline{\hspace{6in}} \\
+\\
+}
+
+\newcommand{\enum}[1]{\begin{enumerate} #1 \end{enumerate}}
+\newcommand{\e}[1]{\begin{itemize} #1 \end{itemize}}
+\newcommand{\itm}{\item}
+

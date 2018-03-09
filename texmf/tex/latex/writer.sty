@@ -1,0 +1,32 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{writer}
+\RequirePackage{setspace}
+\RequirePackage{fullpage} % this sets up 1 inch margins
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+\RequirePackage{graphicx}
+\RequirePackage[authoryear]{natbib}
+\bibpunct{(}{)}{,}{a}{,}{,}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.5in}
+\setlength{\parindent}{15pt}
+\doublespacing
+
+\newcommand{\q}[1]{%
+   \setlength{\parindent}{0pt}
+   \begin{quote}
+   \small
+   \singlespace
+   #1
+   \end{quote}
+   \setlength{\parindent}{15pt}
+}
+
+
+\newcommand{\ind}{\setlength{\parindent}{15pt}}
+
+\newcommand{\enum}[1]{\begin{enumerate} #1 \end{enumerate}}
+

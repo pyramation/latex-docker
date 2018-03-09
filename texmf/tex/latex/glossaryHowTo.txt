@@ -1,0 +1,8 @@
+latex midterm.tex
+# glossary
+makeindex midterm.glo -s midterm.ist -t midterm.glg -o midterm.gls
+# references
+bibtex midterm.aux
+# final parse now
+mylatex midterm.tex
+
