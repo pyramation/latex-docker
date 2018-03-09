@@ -51,9 +51,19 @@ ps2pdf math.ps
 
 # bibtex
 
+At the bottom of your document, let's say `awesome.tex` include
+
+```
+\newpage
+\bibliographystyle{cell}
+\bibliography{sources}
+```
+
+`\bibliography` is referencing `sources.bib` in the current directory. Then run:
+
 ```sh
-latex math.tex
-bibtex math.tex
-latex math.tex
-latex math.tex
+latex awesome.tex
+bibtex awesome.tex
+latex awesome.tex
+latex awesome.tex
 ```
