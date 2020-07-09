@@ -1,6 +1,6 @@
 
 def:
-	docker-compose build
+	docker build -t pyramation/latex:alpine latex/
 
 ssh:
-	docker run -v `pwd`/tex:/usr/src -i -t pyramation/latex /bin/bash
+	docker run -v `pwd`/tex:/usr/src -i -t pyramation/latex:alpine /bin/bash
