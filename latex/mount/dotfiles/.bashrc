@@ -79,6 +79,5 @@ alias la='ls -A'
 alias l='ls -CF'
 
 source ~/.bash_prompt
-source ~/.git-completion.sh
 cat /etc/motd
 echo

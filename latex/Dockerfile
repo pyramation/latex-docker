@@ -1,16 +1,21 @@
-FROM ubuntu:16.10
+FROM node:12.18.2-alpine3.11
 
-RUN apt-get update
-RUN apt-get install -y texlive-full
-RUN apt-get install -y python-software-properties
-RUN apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
-RUN apt-get install nodejs
+RUN apk add --no-cache texlive-full
 
-# apt-get install texlive-lang-all
+RUN apk add --no-cache --virtual .build-deps \
+    alpine-sdk 
+
+RUN wget http://ftp.math.purdue.edu/mirrors/ctan.org/support/rtf2latex2e/rtf2latex2e-2-0-1.zip \
+    && unzip rtf2latex2e-2-0-1.zip \
+    && cd rtf2latex2e-2-0-1 \
+    && make \
+    && make install
+
+RUN apk del .build-deps
+
+# install texlive-lang-all
 # for latexdiff
-# apt-get install libalgorithm-diff-perl
-# TODO move latexdiff and rtf2latex2e into bin!
+# install libalgorithm-diff-perl
 
 ADD mount/etc /etc
 ADD mount/dotfiles /root
