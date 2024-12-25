@@ -1,3 +1,5 @@
+DEPRECATED IN FAVOR OF https://github.com/pyramation/latex-pstricks-docker/
+
 The goal of this image is to make it super easy to have a turn-key LaTeX setup ;)
 
 # build
